@@ -3,6 +3,8 @@ body {
 }
 
 @media screen and (max-width: 640px) {
+
+/* Start der App */
 .lightning {
     margin: 0;
     position: absolute;
@@ -33,7 +35,64 @@ body {
     display: block;
 }
 
+
+/* Hauptmenü */
+
 .menu {
+    display: none;
+}
+
+.menuheading {
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+.status {
+    text-align: center;
+    background-color: #ffc09f;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 120px;
+    height: 70px;
+}
+
+.feed {
+    text-align: center;
+    background-color: #adf7b6;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    width: 120px;
+    height: 70px;
+}
+
+.profile {
+    text-align: center;
+    background-color: #a0ced9;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 120px;
+    height: 70px;
+}
+
+.chatfield {
+    text-align: center;
+    background-color: #ffee93;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    width: 120px;
+    height: 70px;
+}
+
+.chat {
     display: none;
 }
 

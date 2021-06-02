@@ -4,8 +4,12 @@ var Lightning;
     window.addEventListener("load", handleLoad);
     function handleLoad(_event) {
         console.log("Anwendung startet");
+        // Blitz Bild
         let lightning = document.querySelector("#lightningid");
         lightning.addEventListener("click", startApp);
+        // Chat
+        let chatfield = document.querySelector("#chatfieldid");
+        chatfield.addEventListener("click", startChat);
     }
     function startApp(_event) {
         console.log("funktioniert!");
@@ -22,6 +26,23 @@ var Lightning;
         }
         else {
             menu.style.display = "block";
+        }
+    }
+    function startChat(_event) {
+        console.log("funktioniert2!");
+        let menu = document.querySelector("#menuid");
+        let chat = document.querySelector("#chatid");
+        if (menu.style.display == "block") {
+            menu.style.display = "none";
+        }
+        else {
+            menu.style.display = "none";
+        }
+        if (chat.style.display == "none") {
+            chat.style.display = "block";
+        }
+        else {
+            chat.style.display = "block";
         }
     }
 })(Lightning || (Lightning = {}));
