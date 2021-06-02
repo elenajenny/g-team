@@ -8,3 +8,13 @@ body {
     margin-right: auto;
     width: 50%;
 }
+
+.startheading {
+    text-align: center;
+    font-size: 25px;
+}
+
+.startslogan {
+    text-align: center;
+    font-size: 20px;
+}
