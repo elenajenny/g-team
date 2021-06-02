@@ -29,4 +29,12 @@ body {
     font-size: 20px;
 }
 
+.start {
+    display: block;
+}
+
+.menu {
+    display: none;
+}
+
 }
