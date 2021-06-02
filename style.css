@@ -3,6 +3,8 @@ body {
 }
 
 .lightning {
-    position: relative;
-    object-position: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
