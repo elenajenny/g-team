@@ -39,8 +39,8 @@ body {
 /* Navigation */
 
 .navigation {
-    background-color: #eaeaea;
-    height: 25px;
+    background-color: #fff8d0;
+    height: 120px;
 }
 
 .house {
@@ -48,7 +48,6 @@ body {
     top: 5%;
     left: 90%;
     font-size: 20px;
-    width: 20%;
 }
 
 .arrow {
@@ -75,47 +74,80 @@ body {
 }
 
 .status {
-    text-align: center;
     background-color: #ffc09f;
     position: absolute;
     top: 30%;
     left: 10%;
     width: 120px;
     height: 70px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
 }
 
 .feed {
-    text-align: center;
     background-color: #adf7b6;
     position: absolute;
     top: 30%;
     right: 10%;
     width: 120px;
     height: 70px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
 }
 
 .profile {
-    text-align: center;
     background-color: #a0ced9;
     position: absolute;
     top: 50%;
     left: 10%;
     width: 120px;
     height: 70px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
 }
 
 .chatfield {
-    text-align: center;
     background-color: #ffee93;
     position: absolute;
     top: 50%;
     right: 10%;
     width: 120px;
     height: 70px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
 }
+
+.textmenu {
+    text-align: center;
+    position: relative;
+    top: 17%;
+}
+
+
+/* Chat */
 
 .chat {
     display: none;
+}
+
+.chatname {
+    position: relative;
+    left: 25%;
+    top: 5%;
+    font-size: 20px;
+}
+
+.picturespan {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    font-size: 60px;
+}
+
+.profilepicture {
+    width: 100px;
+    height: 75px;
+    border-radius: 10px;
 }
 
 }
