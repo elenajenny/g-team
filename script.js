@@ -7,6 +7,11 @@ var Lightning;
         // Blitz Bild
         let lightning = document.querySelector("#lightningid");
         lightning.addEventListener("click", startApp);
+        // Navigation
+        let house = document.querySelector("#houseid");
+        house.addEventListener("click", NavigateToMenu);
+        let backarrow = document.querySelector("#arrowid");
+        backarrow.addEventListener("click", NavigateBack);
         // Chat
         let chatfield = document.querySelector("#chatfieldid");
         chatfield.addEventListener("click", startChat);
@@ -27,6 +32,30 @@ var Lightning;
         else {
             menu.style.display = "block";
         }
+    }
+    function NavigateToMenu(_event) {
+        // Haus Menü
+        console.log("navigieren erfolgreich");
+        let menu = document.querySelector("#menuid");
+        let chat = document.querySelector("#chatid");
+        if (menu.style.display == "none") {
+            menu.style.display = "block";
+        }
+        else {
+            menu.style.display = "block";
+        }
+        if (chat.style.display == "block") {
+            chat.style.display = "none";
+        }
+        else {
+            chat.style.display = "none";
+        }
+    }
+    function NavigateBack(_event) {
+        // Zurück Menü
+        console.log("pfeil");
+        // window.history.back();
+        window.history.go(-1);
     }
     function startChat(_event) {
         console.log("funktioniert2!");

@@ -1,13 +1,20 @@
 namespace Lightning {
     window.addEventListener("load", handleLoad);
 
-    
-    function handleLoad (_event: Event) {
+    function handleLoad(_event: Event): void {
     console.log("Anwendung startet");
 
     // Blitz Bild
     let lightning: HTMLElement = <HTMLElement>document.querySelector("#lightningid");
     lightning.addEventListener("click", startApp);
+
+    // Navigation
+    let house: HTMLElement = <HTMLElement>document.querySelector("#houseid");
+    house.addEventListener("click", NavigateToMenu);
+
+    let backarrow: HTMLElement = <HTMLElement>document.querySelector("#arrowid");
+    backarrow.addEventListener("click", NavigateBack);
+
 
     // Chat
     let chatfield: HTMLDivElement = <HTMLDivElement>document.querySelector("#chatfieldid");
@@ -30,6 +37,35 @@ namespace Lightning {
         } else {
             menu.style.display = "block";
         }
+    }
+
+
+    function NavigateToMenu(_event: Event): void {
+
+        // Haus Menü
+        console.log("navigieren erfolgreich");
+        let menu: HTMLElement = <HTMLElement>document.querySelector("#menuid");
+        let chat: HTMLElement = <HTMLElement>document.querySelector("#chatid");
+
+        if (menu.style.display == "none") {
+            menu.style.display = "block";
+        } else {
+            menu.style.display = "block";
+        }
+
+        if (chat.style.display == "block") {
+            chat.style.display = "none";
+        } else {
+            chat.style.display = "none";
+        }
+
+    }
+
+    function NavigateBack(_event: Event): void {
+        // Zurück Menü
+        console.log("pfeil");
+        // window.history.back();
+        window.history.go(-1);
     }
 
     function startChat(_event: Event): void {
