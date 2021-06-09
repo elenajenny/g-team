@@ -111,6 +111,11 @@ namespace Lightning {
     function setColor(_event: Event): void {
         console.log("Es hat funktioniert jiha");
         let music: HTMLDivElement = <HTMLDivElement>document.querySelector("#musicid");
+        let film: HTMLDivElement = <HTMLDivElement>document.querySelector("#filmid");
+        let sport: HTMLDivElement = <HTMLDivElement>document.querySelector("#sportid");
+        let fitness: HTMLDivElement = <HTMLDivElement>document.querySelector("#fitnessid");
+
+        
         let value = music.getAttribute("value");
         console.log("value:" + value);
  

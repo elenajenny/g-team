@@ -97,6 +97,9 @@ var Lightning;
     function setColor(_event) {
         console.log("Es hat funktioniert jiha");
         let music = document.querySelector("#musicid");
+        let film = document.querySelector("#filmid");
+        let sport = document.querySelector("#sportid");
+        let fitness = document.querySelector("#fitnessid");
         let value = music.getAttribute("value");
         console.log("value:" + value);
     }
