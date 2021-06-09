@@ -149,9 +149,7 @@ body {
     height: 75px;
     border-radius: 10px;
 }
-
-}
-/* #form {
+#form {
     background: rgba(0, 0, 0, 0.15);
     padding: 0.25rem;
     position: fixed;
@@ -193,4 +191,5 @@ body {
 }
 #messages > li:nth-child(odd){
     background: #efefef;
-} */
+}
+}

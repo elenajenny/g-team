@@ -70,6 +70,7 @@ namespace Lightning {
 
     function startChat(_event: Event): void {
         console.log("funktioniert2!");
+               
         let menu: HTMLElement = <HTMLElement>document.querySelector("#menuid");
         let chat: HTMLElement = <HTMLElement>document.querySelector("#chatid");
     
