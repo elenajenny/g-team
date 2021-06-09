@@ -1,9 +1,5 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0; 
-    height: 100%; 
-    /* scroll-behavior: auto;
-    overflow: hidden; */
 }
 
 @media screen and (max-width: 640px) {
@@ -153,10 +149,7 @@ body {
     height: 75px;
     border-radius: 10px;
 }
-
-/* Chateingabe */
-
-.form {
+#form {
     background: rgba(0, 0, 0, 0.15);
     padding: 0.25rem;
     position: fixed;
@@ -169,20 +162,17 @@ body {
     box-sizing: border-box;
     backdrop-filter: blur(10px);
 }
-
-.input {
+#input {
     border: none;
     padding: 0 1rem;
     flex-grow: 1;
     border-radius: 2rem;
     margin: 0.25rem;
 }
-
-.input:focus {
+#input:focus {
     outline: none;
 }
-
-.form > button {
+#form > button {
     background: #333;
     border: none;
     padding: 0 1rem;
@@ -192,17 +182,15 @@ body {
     color: #fff;
 }
 
-.messages {
+#messages {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-
-.messages > li {
+#messages > li {
     padding: 0.5rem 1rem;
 }
-
-.messages > li:nth-child(odd){
+#messages > li:nth-child(odd){
     background: #efefef;
 }
 }

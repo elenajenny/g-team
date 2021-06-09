@@ -10,8 +10,8 @@ var Lightning;
         // Navigation
         let house = document.querySelector("#houseid");
         house.addEventListener("click", NavigateToMenu);
-        let backarrow = document.querySelector("#arrowid");
-        backarrow.addEventListener("click", NavigateBack);
+        // let backarrow: HTMLElement = <HTMLElement>document.querySelector("#arrowid");
+        // backarrow.addEventListener("click", NavigateBack);
         // Chat
         let chatfield = document.querySelector("#chatfieldid");
         chatfield.addEventListener("click", startChat);
@@ -51,12 +51,12 @@ var Lightning;
             chat.style.display = "none";
         }
     }
-    function NavigateBack(_event) {
-        // Zurück Menü
-        console.log("pfeil");
-        // window.history.back();
-        window.history.go(-1);
-    }
+    // function NavigateBack(_event: Event): void {
+    //     // Zurück Menü
+    //     console.log("pfeil");
+    //     // window.history.back();
+    //     window.history.go(-1);
+    // }
     function startChat(_event) {
         console.log("funktioniert2!");
         let menu = document.querySelector("#menuid");

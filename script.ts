@@ -12,8 +12,8 @@ namespace Lightning {
     let house: HTMLElement = <HTMLElement>document.querySelector("#houseid");
     house.addEventListener("click", NavigateToMenu);
 
-    let backarrow: HTMLElement = <HTMLElement>document.querySelector("#arrowid");
-    backarrow.addEventListener("click", NavigateBack);
+    // let backarrow: HTMLElement = <HTMLElement>document.querySelector("#arrowid");
+    // backarrow.addEventListener("click", NavigateBack);
 
 
     // Chat
@@ -61,12 +61,12 @@ namespace Lightning {
 
     }
 
-    function NavigateBack(_event: Event): void {
-        // Zurück Menü
-        console.log("pfeil");
-        // window.history.back();
-        window.history.go(-1);
-    }
+    // function NavigateBack(_event: Event): void {
+    //     // Zurück Menü
+    //     console.log("pfeil");
+    //     // window.history.back();
+    //     window.history.go(-1);
+    // }
 
     function startChat(_event: Event): void {
         console.log("funktioniert2!");
