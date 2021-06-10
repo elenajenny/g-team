@@ -24,7 +24,7 @@
     <!-- Dashboard -->
     <div id="menuid" class="menu">
         <p class="menuheading">Hauptmenü</p>
-        <div id="statusid" class="status">
+        <div id="statusfieldid" class="statusfield">
             <p class="textmenu"><b>Status</b></p>
         </div>
         <div id="feedid" class="feed">
@@ -39,6 +39,7 @@
     </div>
 
     <!-- Status -->
+    <!-- Kategorie wählen -->
     <div id="categoryid" class="maincategory">
         <!-- Navigation -->
         <span class="house" id="houseid">
@@ -61,6 +62,96 @@
         <div id="fitnessid" class="fitness" value="Fitness">
             <p class="category"><b>Fitness</b></p>
         </div>
+    </div>
+
+    <!-- Streaming Dienst -->
+    <div id="streamingid" class="streaming">
+        <!-- Navigation -->
+        <span class="house" id="navihouseid">
+            <i class="fas fa-home"></i>
+        </span>
+        <span class="streamingheading">
+            <p><b>Musik</b></p>
+        </span>
+        <p class="description">Wähle einen Streaming Dienst.</p>
+        <!-- Status wählen -->
+        <div id="spotifyid" class="spotify" value="Spotify">
+            <p class="category"><b>Spotify</b></p>
+        </div>
+        <div id="deezerid" class="deezer" value="Deezer">
+            <p class="category"><b>Deezer</b></p>
+        </div>
+        <div id="applemusicid" class="applemusic" value="Apple Music">
+            <p class="category"><b>Apple Music</b></p>
+        </div>
+        <div id="tidalid" class="tidal" value="Tidal">
+            <p class="category"><b>Tidal</b></p>
+        </div>
+        <div id="amazonmusicid" class="amazonmusic" value="Amazon Music">
+            <p class="category"><b>Amazon Music</b></p>
+        </div>
+    </div>
+
+    <!-- Streaming Dienst -->
+    <div id="genreid" class="genre">
+        <!-- Navigation -->
+        <span class="house" id="genrehouseid">
+            <i class="fas fa-home"></i>
+        </span>
+        <span class="genreheading">
+            <p><b>Genre</b></p>
+        </span>
+        <p class="description">Wähle ein Genre aus.</p>
+        <!-- Status wählen -->
+        <div id="jazzid" class="jazz" value="Jazz">
+            <p class="category"><b>Jazz</b></p>
+        </div>
+        <div id="rnbid" class="rnb" value="RnB">
+            <p class="category"><b>RnB</b></p>
+        </div>
+        <div id="klassikid" class="klassik" value="Klassik">
+            <p class="category"><b>Klassik</b></p>
+        </div>
+        <div id="soulid" class="soul" value="Soul">
+            <p class="category"><b>Soul</b></p>
+        </div>
+        <div id="hiphopid" class="hiphop" value="Hip Hop">
+            <p class="category"><b>Hip Hop</b></p>
+        </div>
+    </div>
+
+     <!-- fertiger Status -->
+     <div id="statusid" class="status">
+        <!-- Navigation -->
+        <span class="house" id="statushouseid">
+            <i class="fas fa-home"></i>
+        </span>
+        <span class="statusheading">
+            <p><b>Status posten</b></p>
+        </span>
+        <p class="description2"><b>Dein Status</b></p>
+        <span id="timeid" class="time"></span>
+        <div class="icons">
+            <i class="far fa-edit"></i>
+            <span class="seperate"></span>
+            <i class="far fa-trash-alt"></i>
+        </div>
+        <div id="statusdivid" class="statusdiv">
+            <div class="head">
+                <span class="category1">Kategorie</span>
+                <span class="category2">Streaming Dienst</span>
+                <span class="category3">Genre</span>
+            </div>
+            <div class="bottom">
+                <span class="chosencategory1" id="chosencategory1id"></span>
+                <span class="chosencategory2" id="chosencategory2id"></span>
+                <span class="chosencategory3" id="chosencategory3id"></span>
+            </div>
+        </div>
+        <div class="notification">
+            <p>Dein Status wird in 24h gelöscht!</p>
+        </div>
+        <button id="postbuttonid" class="postbutton">posten</button> 
     </div>
         
     </div>

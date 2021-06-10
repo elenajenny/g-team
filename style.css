@@ -74,7 +74,7 @@ body {
     font-size: 25px;
 }
 
-.status {
+.statusfield {
     background-color: #ffc09f;
     position: absolute;
     top: 30%;
@@ -125,7 +125,7 @@ body {
 }
 
 
-/* Status */
+/* Kategorien */
 
 .maincategory {
     display: none;
@@ -199,6 +199,289 @@ body {
     right: 5%;
 }
 
+
+/* Streaming Dienst */
+
+.streaming {
+    display: none;
+}
+
+.streamingheading {
+    margin: 0;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+.spotify {
+    background-color: #ffc09f;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 320px;
+    height: 85px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+.deezer {
+    background-color: #ffe0cf;
+    position: absolute;
+    top: 36%;
+    left: 5%;
+    width: 320px;
+    height: 85px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+.applemusic {
+    background-color: #ffe0cf;
+    position: absolute;
+    top: 52%;
+    left: 5%;
+    width: 320px;
+    height: 85px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+.tidal {
+    background-color: #ffe0cf;
+    position: absolute;
+    top: 68%;
+    left: 5%;
+    width: 320px;
+    height: 85px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+.amazonmusic {
+    background-color: #ffe0cf;
+    position: absolute;
+    top: 84%;
+    left: 5%;
+    width: 320px;
+    height: 85px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+.category {
+    text-align: right;
+    position: relative;
+    top: 5%;
+    right: 5%;
+}
+
+
+/* Genre */
+
+.genre {
+    display: none;
+}
+
+.genreheading {
+    margin: 0;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+.jazz {
+    background-color: #ffc09f;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 320px;
+    height: 85px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+.rnb {
+    background-color: #ffe0cf;
+    position: absolute;
+    top: 36%;
+    left: 5%;
+    width: 320px;
+    height: 85px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+.klassik {
+    background-color: #ffe0cf;
+    position: absolute;
+    top: 52%;
+    left: 5%;
+    width: 320px;
+    height: 85px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+.soul {
+    background-color: #ffe0cf;
+    position: absolute;
+    top: 68%;
+    left: 5%;
+    width: 320px;
+    height: 85px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+.hiphop {
+    background-color: #ffe0cf;
+    position: absolute;
+    top: 84%;
+    left: 5%;
+    width: 320px;
+    height: 85px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+.category {
+    text-align: right;
+    position: relative;
+    top: 5%;
+    right: 5%;
+}
+
+
+/* fertiger Status */
+.status {
+    display: none;
+}
+
+.statusheading {
+    margin: 0;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+.description2 {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    font-size: 20px;
+}
+
+.time {
+    position: absolute;
+    top: 19%;
+    left: 75%;
+    font-size: 15px;
+}
+
+.icons {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+}
+
+.seperate {
+    border-left: 4px solid #000000;
+    height: 10px;
+}
+
+.statusdiv {
+    background-color: #ffc09f;
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    width: 90%;
+    height: 85px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+.head {
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.category1 {
+    position: relative;
+    top: 20%;
+    left: 3%;
+}
+
+.category2 {
+    position: relative;
+    top: 20%;
+    left: 10%;
+}
+
+.category3 {
+    position: relative;
+    top: 20%;
+    left: 20%;
+}
+
+.bottom {
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.chosencategory1 {
+    position: relative;
+    top: 20%;
+    left: 5%;
+}
+
+.chosencategory2 {
+    position: relative;
+    top: 20%;
+    left: 30%;
+}
+
+.chosencategory3 {
+    position: relative;
+    top: 20%;
+    left: 52%;
+}
+
+.notification {
+    background-color: #ffffff;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    width: 90%;
+    height: 45px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+    text-align: center;
+}
+
+.postbutton {
+    background-color: #eaeaea;
+    position: absolute;
+    top: 90%;
+    left: 60%;
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    border-color: #eaeaea;
+    box-shadow: 5px 5px 5px #b6b6b6;
+    text-align: center;
+    font-size: 15px;
+}
 
 
 /* Chat */
