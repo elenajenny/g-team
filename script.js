@@ -20,6 +20,8 @@ var Lightning;
         // Navigation
         let house = document.querySelector("#houseid");
         house.addEventListener("click", NavigateToMenu);
+        let housechat = document.querySelector("#getbackid");
+        housechat.addEventListener("click", NavigateToMenu);
         // let backarrow: HTMLElement = <HTMLElement>document.querySelector("#arrowid");
         // backarrow.addEventListener("click", NavigateBack);
         // Status

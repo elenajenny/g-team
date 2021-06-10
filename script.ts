@@ -23,6 +23,8 @@ namespace Lightning {
     // Navigation
     let house: HTMLElement = <HTMLElement>document.querySelector("#houseid");
     house.addEventListener("click", NavigateToMenu);
+    let housechat: HTMLElement = <HTMLElement>document.querySelector("#getbackid");
+    housechat.addEventListener("click", NavigateToMenu);
 
     // let backarrow: HTMLElement = <HTMLElement>document.querySelector("#arrowid");
     // backarrow.addEventListener("click", NavigateBack);
