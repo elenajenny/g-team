@@ -85,7 +85,7 @@ body {
     box-shadow: 5px 5px 5px #b6b6b6;
 }
 
-.feed {
+.feedfield {
     background-color: #adf7b6;
     position: absolute;
     top: 30%;
@@ -96,7 +96,7 @@ body {
     box-shadow: 5px 5px 5px #b6b6b6;
 }
 
-.profile {
+.profilefield {
     background-color: #a0ced9;
     position: absolute;
     top: 50%;
@@ -481,6 +481,11 @@ body {
     box-shadow: 5px 5px 5px #b6b6b6;
     text-align: center;
     font-size: 15px;
+}
+
+/* Profilansicht */
+.profile {
+    display: none;
 }
 
 

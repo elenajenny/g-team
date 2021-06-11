@@ -53,11 +53,16 @@ var Lightning;
         housegenre.addEventListener("click", NavigateToMenu);
         let housestatus = document.querySelector("#statushouseid");
         housestatus.addEventListener("click", NavigateToMenu);
+        let houseprofile = document.querySelector("#profilehouseid");
+        houseprofile.addEventListener("click", NavigateToMenu);
         // let backarrow: HTMLElement = <HTMLElement>document.querySelector("#arrowid");
         // backarrow.addEventListener("click", NavigateBack);
         // Statusfeld
         let statusfield = document.querySelector("#statusfieldid");
         statusfield.addEventListener("click", startStatus);
+        //Profil
+        let profilefield = document.querySelector("#profilefieldid");
+        profilefield.addEventListener("click", startProfile);
         // Chat
         let chatfield = document.querySelector("#chatfieldid");
         chatfield.addEventListener("click", startChat);
@@ -88,6 +93,7 @@ var Lightning;
         let streaming = document.querySelector("#streamingid");
         let genre = document.querySelector("#genreid");
         let status = document.querySelector("#statusid");
+        let profile = document.querySelector("#profileid");
         if (menu.style.display == "none") {
             menu.style.display = "block";
         }
@@ -123,6 +129,12 @@ var Lightning;
         }
         else {
             status.style.display = "none";
+        }
+        if (profile.style.display == "block") {
+            profile.style.display = "none";
+        }
+        else {
+            profile.style.display = "none";
         }
     }
     function startStatus(_event) {
@@ -269,6 +281,23 @@ var Lightning;
         }
         else {
             chat.style.display = "block";
+        }
+    }
+    function startProfile(_event) {
+        console.log("profilansicht");
+        let profile = document.querySelector("#profileid");
+        let menu = document.querySelector("#menuid");
+        if (menu.style.display == "block") {
+            menu.style.display = "none";
+        }
+        else {
+            menu.style.display = "none";
+        }
+        if (profile.style.display == "none") {
+            profile.style.display = "block";
+        }
+        else {
+            profile.style.display = "block";
         }
     }
 })(Lightning || (Lightning = {}));

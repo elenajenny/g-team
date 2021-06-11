@@ -59,6 +59,8 @@ namespace Lightning {
     housegenre.addEventListener("click", NavigateToMenu);
     let housestatus: HTMLElement = <HTMLElement>document.querySelector("#statushouseid");
     housestatus.addEventListener("click", NavigateToMenu);
+    let houseprofile: HTMLElement = <HTMLElement>document.querySelector("#profilehouseid");
+    houseprofile.addEventListener("click", NavigateToMenu);
 
     // let backarrow: HTMLElement = <HTMLElement>document.querySelector("#arrowid");
     // backarrow.addEventListener("click", NavigateBack);
@@ -66,6 +68,10 @@ namespace Lightning {
     // Statusfeld
     let statusfield: HTMLDivElement = <HTMLDivElement>document.querySelector("#statusfieldid");
     statusfield.addEventListener("click", startStatus);
+
+    //Profil
+    let profilefield: HTMLDivElement = <HTMLDivElement>document.querySelector("#profilefieldid");
+    profilefield.addEventListener("click", startProfile);
 
     // Chat
     let chatfield: HTMLDivElement = <HTMLDivElement>document.querySelector("#chatfieldid");
@@ -101,6 +107,7 @@ namespace Lightning {
         let streaming: HTMLElement = <HTMLElement>document.querySelector("#streamingid");
         let genre: HTMLElement = <HTMLElement>document.querySelector("#genreid");
         let status: HTMLElement = <HTMLElement>document.querySelector("#statusid");
+        let profile: HTMLElement = <HTMLElement>document.querySelector("#profileid");
 
         if (menu.style.display == "none") {
             menu.style.display = "block";
@@ -136,6 +143,12 @@ namespace Lightning {
             status.style.display = "none";
         } else {
             status.style.display = "none";
+        }
+
+        if (profile.style.display == "block") {
+            profile.style.display = "none";
+        } else {
+            profile.style.display = "none";
         }
     }
 
@@ -297,6 +310,24 @@ namespace Lightning {
             chat.style.display = "block";
         } else {
             chat.style.display = "block";
+        }
+    }
+
+    function startProfile(_event: Event): void {
+        console.log("profilansicht");
+        let profile: HTMLElement = <HTMLElement>document.querySelector("#profileid");
+        let menu: HTMLElement = <HTMLElement>document.querySelector("#menuid");
+
+        if (menu.style.display == "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "none";
+        }
+
+        if (profile.style.display == "none") {
+            profile.style.display = "block";
+        } else {
+            profile.style.display = "block";
         }
     }
 }
