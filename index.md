@@ -3,40 +3,26 @@
 ## Lightning.
 ### Share the small moments.
 
-```markdown
-Anonym mit Menschen verbinden und virtuell Zeit verbringen
 
-**Unsere Mission**
+<br> **Unsere Mission** </br>
+<br> Anonym mit Menschen verbinden und virtuell Zeit verbringen </br>
+<br>
 Mit Ligtning bieten wir Menschen aller Generationen die Möglichkeit, virtuell Zeit zu verbringen. Dabei kann man aus verschiedenen Kategorien eine Aktivität auswählen, wie z.B. auf Netflix gemeinsam einen Film in einem ausgewählten Genre anschauen oder über YouTube zusammen ein Workout machen und dann seinen Status posten. Im Übersichtsfeed können dann andere anonyme Nutzer den Status sehen und andersrum und sich über einen Chat dann in Verbindung setzen. So können sich Menschen mit gleichen Interessen vernetzen.
 
-
-
 ```markdown
-Syntax highlighted code block
+Hauptfunktionen
+- Status setzen
+- Anonymes Feed zum Vernetzen
+- Chat Bereich 
+- Profil 
 
-# Header 1
-## Header 2
-### Header 3
+Kommunikationskonzept: Chat
+Durch die Chat Funktion können sich Nutzer über ihren Status unterhalten
+und sich verabreden. Dabei löscht sich der Status von selbst, sobald
+der Status nicht mehr existiert oder vom Nutzer gelöscht wurde.
+Ebenfalls kann man keinen Chat von selbst starten, da dieser nur 
+über den Feed funktioniert, bzw. da die Nutzer alle anonym sind.
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/elenajenny/g-team/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
 
 You can use the [editor on GitHub](https://github.com/elenajenny/g-team/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
