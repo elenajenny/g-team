@@ -1,4 +1,3 @@
-# Willkommen zu Lightning!
 
 ## Lightning.
 ### Share the small moments.
