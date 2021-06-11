@@ -1,8 +1,15 @@
 # Willkommen zu Lightning!
 
-
 ## Lightning.
 ### Share the small moments.
+
+```markdown
+Anonym mit Menschen verbinden und virtuell Zeit verbringen
+
+**Unsere Mission**
+Mit Ligtning bieten wir Menschen aller Generationen die Möglichkeit, virtuell Zeit zu verbringen. Dabei kann man aus verschiedenen Kategorien eine Aktivität auswählen, wie z.B. auf Netflix gemeinsam einen Film in einem ausgewählten Genre anschauen oder über YouTube zusammen ein Workout machen und dann seinen Status posten. Im Übersichtsfeed können dann andere anonyme Nutzer den Status sehen und andersrum und sich über einen Chat dann in Verbindung setzen. So können sich Menschen mit gleichen Interessen vernetzen.
+
+
 
 ```markdown
 Syntax highlighted code block
