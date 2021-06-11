@@ -43,26 +43,38 @@ var Lightning;
         let lightning = document.querySelector("#lightningid");
         lightning.addEventListener("click", startApp);
         // Navigation
-        let house = document.querySelector("#houseid");
-        house.addEventListener("click", NavigateToMenu);
-        let housechat = document.querySelector("#getbackid");
-        housechat.addEventListener("click", NavigateToMenu);
-        let housestreaming = document.querySelector("#navihouseid");
-        housestreaming.addEventListener("click", NavigateToMenu);
-        let housegenre = document.querySelector("#genrehouseid");
-        housegenre.addEventListener("click", NavigateToMenu);
-        let housestatus = document.querySelector("#statushouseid");
-        housestatus.addEventListener("click", NavigateToMenu);
-        let houseprofile = document.querySelector("#profilehouseid");
-        houseprofile.addEventListener("click", NavigateToMenu);
-        // let backarrow: HTMLElement = <HTMLElement>document.querySelector("#arrowid");
-        // backarrow.addEventListener("click", NavigateBack);
+        let menu = document.querySelector("#houseid");
+        menu.addEventListener("click", NavigateToMenu);
+        let chatmenu = document.querySelector("#getbackid");
+        chatmenu.addEventListener("click", NavigateToMenu);
+        let streamingmenu = document.querySelector("#navihouseid");
+        streamingmenu.addEventListener("click", NavigateToMenu);
+        let genremenu = document.querySelector("#genrehouseid");
+        genremenu.addEventListener("click", NavigateToMenu);
+        let statusmenu = document.querySelector("#statushouseid");
+        statusmenu.addEventListener("click", NavigateToMenu);
+        let profilemenu = document.querySelector("#profilehouseid");
+        profilemenu.addEventListener("click", NavigateToMenu);
+        let feedmenu = document.querySelector("#feedid");
+        feedmenu.addEventListener("click", NavigateToMenu);
         // Statusfeld
         let statusfield = document.querySelector("#statusfieldid");
         statusfield.addEventListener("click", startStatus);
         //Profil
         let profilefield = document.querySelector("#profilefieldid");
         profilefield.addEventListener("click", startProfile);
+        // ausloggen
+        let logout = document.querySelector("#logoutid");
+        logout.addEventListener("click", goLogout);
+        //Benachrichtigungen anschauen
+        let notifications = document.querySelector("#notificationtextid");
+        notifications.addEventListener("click", seeNotifications);
+        //Profileinstellungen anschauen
+        let profilesettings = document.querySelector("#profiletextid");
+        profilesettings.addEventListener("click", seeProfile);
+        //Feed
+        let feedfield = document.querySelector("#feedfieldid");
+        feedfield.addEventListener("click", startProfile);
         // Chat
         let chatfield = document.querySelector("#chatfieldid");
         chatfield.addEventListener("click", startChat);
@@ -94,6 +106,7 @@ var Lightning;
         let genre = document.querySelector("#genreid");
         let status = document.querySelector("#statusid");
         let profile = document.querySelector("#profileid");
+        let feed = document.querySelector("#feedid");
         if (menu.style.display == "none") {
             menu.style.display = "block";
         }
@@ -135,6 +148,12 @@ var Lightning;
         }
         else {
             profile.style.display = "none";
+        }
+        if (feed.style.display == "block") {
+            feed.style.display = "none";
+        }
+        else {
+            feed.style.display = "none";
         }
     }
     function startStatus(_event) {
@@ -298,6 +317,71 @@ var Lightning;
         }
         else {
             profile.style.display = "block";
+        }
+    }
+    function goLogout(_event) {
+        let profile = document.querySelector("#profileid");
+        let start = document.querySelector("#startid");
+        if (profile.style.display == "block") {
+            profile.style.display = "none";
+        }
+        else {
+            profile.style.display = "none";
+        }
+        if (start.style.display == "none") {
+            start.style.display = "block";
+        }
+        else {
+            start.style.display = "block";
+        }
+    }
+    function seeNotifications(_event) {
+        let leftside = document.querySelector("#leftsideid");
+        let rightside = document.querySelector("#rightsideid");
+        if (leftside.style.display == "block") {
+            leftside.style.display = "none";
+        }
+        else {
+            leftside.style.display = "none";
+        }
+        if (rightside.style.display == "none") {
+            rightside.style.display = "block";
+        }
+        else {
+            rightside.style.display = "block";
+        }
+    }
+    function seeProfile(_event) {
+        let leftside = document.querySelector("#leftsideid");
+        let rightside = document.querySelector("#rightsideid");
+        if (rightside.style.display == "block") {
+            rightside.style.display = "none";
+        }
+        else {
+            rightside.style.display = "none";
+        }
+        if (leftside.style.display == "none") {
+            leftside.style.display = "block";
+        }
+        else {
+            leftside.style.display = "block";
+        }
+    }
+    function startFeed(_event) {
+        console.log("profilansicht");
+        let feed = document.querySelector("#feedid");
+        let menu = document.querySelector("#menuid");
+        if (menu.style.display == "block") {
+            menu.style.display = "none";
+        }
+        else {
+            menu.style.display = "none";
+        }
+        if (feed.style.display == "none") {
+            feed.style.display = "block";
+        }
+        else {
+            feed.style.display = "block";
         }
     }
 })(Lightning || (Lightning = {}));

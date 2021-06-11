@@ -49,21 +49,20 @@ namespace Lightning {
     lightning.addEventListener("click", startApp);
 
     // Navigation
-    let house: HTMLElement = <HTMLElement>document.querySelector("#houseid");
-    house.addEventListener("click", NavigateToMenu);
-    let housechat: HTMLElement = <HTMLElement>document.querySelector("#getbackid");
-    housechat.addEventListener("click", NavigateToMenu);
-    let housestreaming: HTMLElement = <HTMLElement>document.querySelector("#navihouseid");
-    housestreaming.addEventListener("click", NavigateToMenu);
-    let housegenre: HTMLElement = <HTMLElement>document.querySelector("#genrehouseid");
-    housegenre.addEventListener("click", NavigateToMenu);
-    let housestatus: HTMLElement = <HTMLElement>document.querySelector("#statushouseid");
-    housestatus.addEventListener("click", NavigateToMenu);
-    let houseprofile: HTMLElement = <HTMLElement>document.querySelector("#profilehouseid");
-    houseprofile.addEventListener("click", NavigateToMenu);
-
-    // let backarrow: HTMLElement = <HTMLElement>document.querySelector("#arrowid");
-    // backarrow.addEventListener("click", NavigateBack);
+    let menu: HTMLElement = <HTMLElement>document.querySelector("#houseid");
+    menu.addEventListener("click", NavigateToMenu);
+    let chatmenu: HTMLElement = <HTMLElement>document.querySelector("#getbackid");
+    chatmenu.addEventListener("click", NavigateToMenu);
+    let streamingmenu: HTMLElement = <HTMLElement>document.querySelector("#navihouseid");
+    streamingmenu.addEventListener("click", NavigateToMenu);
+    let genremenu: HTMLElement = <HTMLElement>document.querySelector("#genrehouseid");
+    genremenu.addEventListener("click", NavigateToMenu);
+    let statusmenu: HTMLElement = <HTMLElement>document.querySelector("#statushouseid");
+    statusmenu.addEventListener("click", NavigateToMenu);
+    let profilemenu: HTMLElement = <HTMLElement>document.querySelector("#profilehouseid");
+    profilemenu.addEventListener("click", NavigateToMenu);
+    let feedmenu: HTMLElement = <HTMLElement>document.querySelector("#feedid");
+    feedmenu.addEventListener("click", NavigateToMenu);
     
     // Statusfeld
     let statusfield: HTMLDivElement = <HTMLDivElement>document.querySelector("#statusfieldid");
@@ -72,6 +71,22 @@ namespace Lightning {
     //Profil
     let profilefield: HTMLDivElement = <HTMLDivElement>document.querySelector("#profilefieldid");
     profilefield.addEventListener("click", startProfile);
+    
+    // ausloggen
+    let logout: HTMLElement = <HTMLElement>document.querySelector("#logoutid");
+    logout.addEventListener("click", goLogout);
+
+    //Benachrichtigungen anschauen
+    let notifications: HTMLElement = <HTMLElement>document.querySelector("#notificationtextid");
+    notifications.addEventListener("click", seeNotifications);
+
+    //Profileinstellungen anschauen
+    let profilesettings: HTMLElement = <HTMLElement>document.querySelector("#profiletextid");
+    profilesettings.addEventListener("click", seeProfile);
+
+    //Feed
+    let feedfield: HTMLDivElement = <HTMLDivElement>document.querySelector("#feedfieldid");
+    feedfield.addEventListener("click", startProfile);
 
     // Chat
     let chatfield: HTMLDivElement = <HTMLDivElement>document.querySelector("#chatfieldid");
@@ -108,6 +123,7 @@ namespace Lightning {
         let genre: HTMLElement = <HTMLElement>document.querySelector("#genreid");
         let status: HTMLElement = <HTMLElement>document.querySelector("#statusid");
         let profile: HTMLElement = <HTMLElement>document.querySelector("#profileid");
+        let feed: HTMLElement = <HTMLElement>document.querySelector("#feedid");
 
         if (menu.style.display == "none") {
             menu.style.display = "block";
@@ -149,6 +165,12 @@ namespace Lightning {
             profile.style.display = "none";
         } else {
             profile.style.display = "none";
+        }
+
+        if (feed.style.display == "block") {
+            feed.style.display = "none";
+        } else {
+            feed.style.display = "none";
         }
     }
 
@@ -328,6 +350,75 @@ namespace Lightning {
             profile.style.display = "block";
         } else {
             profile.style.display = "block";
+        }
+    }
+
+    function goLogout(_event: Event): void {
+        let profile: HTMLElement = <HTMLElement>document.querySelector("#profileid");
+        let start: HTMLElement = <HTMLElement>document.querySelector("#startid");
+
+        if (profile.style.display == "block") {
+            profile.style.display = "none";
+        } else {
+            profile.style.display = "none";
+        }
+
+        if (start.style.display == "none") {
+            start.style.display = "block";
+        } else {
+            start.style.display = "block";
+        }
+    }
+
+    function seeNotifications(_event: Event): void {
+        let leftside: HTMLElement = <HTMLElement>document.querySelector("#leftsideid");
+        let rightside: HTMLElement = <HTMLElement>document.querySelector("#rightsideid");
+
+        if (leftside.style.display == "block") {
+            leftside.style.display = "none";
+        } else {
+            leftside.style.display = "none";
+        }
+
+        if (rightside.style.display == "none") {
+            rightside.style.display = "block";
+        } else {
+            rightside.style.display = "block";
+        }
+    }
+
+    function seeProfile(_event: Event): void {
+        let leftside: HTMLElement = <HTMLElement>document.querySelector("#leftsideid");
+        let rightside: HTMLElement = <HTMLElement>document.querySelector("#rightsideid");
+
+        if (rightside.style.display == "block") {
+            rightside.style.display = "none";
+        } else {
+            rightside.style.display = "none";
+        }
+
+        if (leftside.style.display == "none") {
+            leftside.style.display = "block";
+        } else {
+            leftside.style.display = "block";
+        }
+    }
+
+    function startFeed(_event: Event): void {
+        console.log("profilansicht");
+        let feed: HTMLElement = <HTMLElement>document.querySelector("#feedid");
+        let menu: HTMLElement = <HTMLElement>document.querySelector("#menuid");
+
+        if (menu.style.display == "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "none";
+        }
+
+        if (feed.style.display == "none") {
+            feed.style.display = "block";
+        } else {
+            feed.style.display = "block";
         }
     }
 }
