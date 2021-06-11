@@ -1,4 +1,4 @@
-#
+# Willkommen bei Lightning
 ## Lightning.
 ### Share the small moments.
 
@@ -8,7 +8,7 @@
 <br>
 Mit Ligtning bieten wir Menschen aller Generationen die Möglichkeit, virtuell Zeit zu verbringen. Dabei kann man aus verschiedenen Kategorien eine Aktivität auswählen, wie z.B. auf Netflix gemeinsam einen Film in einem ausgewählten Genre anschauen oder über YouTube zusammen ein Workout machen und dann seinen Status posten. Im Übersichtsfeed können dann andere anonyme Nutzer den Status sehen und andersrum und sich über einen Chat dann in Verbindung setzen. So können sich Menschen mit gleichen Interessen vernetzen.
 
-![Status](https://user-images.githubusercontent.com/56445993/121700934-b09cb380-cad0-11eb-9001-ddba9c15b7ac.png)
+![Status](https://user-images.githubusercontent.com/56445993/121703031-b1364980-cad2-11eb-8886-d14ecd6bd2cd.png)
 
 Hauptfunktionen
 - Status setzen
