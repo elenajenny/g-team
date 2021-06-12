@@ -10,20 +10,15 @@ Mit Ligtning bieten wir Menschen aller Generationen die Möglichkeit, virtuell Z
 
 ![Status](https://user-images.githubusercontent.com/56445993/121703031-b1364980-cad2-11eb-8886-d14ecd6bd2cd.png)
 
-Hauptfunktionen
-- Status setzen
-- Anonymes Feed zum Vernetzen
-- Chat Bereich 
-- Profil 
-
-![Zeichenfläche – 2](https://user-images.githubusercontent.com/56445993/121700972-babeb200-cad0-11eb-90e3-b1ac6605a23b.png)
-
-Kommunikationskonzept: Chat
+Kommunikationskonzept: Chat <br>
 Durch die Chat Funktion können sich Nutzer über ihren Status unterhalten
 und sich verabreden. Dabei löscht sich der Status von selbst, sobald
 der Status nicht mehr existiert oder vom Nutzer gelöscht wurde.
 Ebenfalls kann man keinen Chat von selbst starten, da dieser nur 
 über den Feed funktioniert, bzw. da die Nutzer alle anonym sind.
 
-![Profil](https://user-images.githubusercontent.com/56445993/121701058-cf02af00-cad0-11eb-964b-3f5290636625.png)
+![Zeichenfläche – 2](https://user-images.githubusercontent.com/56445993/121771786-dfb73180-cb71-11eb-9ebb-7332ce7bad32.png)
+
+![Zeichenfläche – 3](https://user-images.githubusercontent.com/56445993/121771833-2b69db00-cb72-11eb-9b81-850bd0c094eb.png)
+
 
