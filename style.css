@@ -492,7 +492,7 @@ body {
     position: absolute;
     top: 17%;
     left: 15%;
-    width: 70%;
+    width: 75%;
     height: 7%;
     border-radius: 10px;
     box-shadow: 5px 5px 5px #b6b6b6;
@@ -562,15 +562,25 @@ body {
 .notificationtextright {
     position: absolute;
     top: 30%;
-    left: 3%;
+    left: 5%;
     font-size: 17px;
 }
 
 .pushnotifications {
-    position: absolute;
-    top: 170%;
-    width: 50%;
+    position: relative;
+    top: 90%;
+    left: 0%;
 }
+
+.notificationspan {
+    position: relative;
+    top: 100%;
+    left: 0%;
+}
+
+/* .labeltext {
+    width: 30%;
+} */
 
 /* The switch - the box around the slider */
 .switch {
