@@ -270,7 +270,7 @@ var Lightning;
         }
     }
     function postStatus(_event) {
-        let menu = document.querySelector("#menuid");
+        let feed = document.querySelector("#feedid");
         let status = document.querySelector("#statusid");
         if (status.style.display == "block") {
             status.style.display = "none";
@@ -278,11 +278,41 @@ var Lightning;
         else {
             status.style.display = "none";
         }
-        if (menu.style.display == "none") {
-            menu.style.display = "block";
+        if (feed.style.display == "none") {
+            feed.style.display = "block";
         }
         else {
-            menu.style.display = "block";
+            feed.style.display = "block";
+        }
+        // startFeed(_event);
+        if (statusarray[0] == "Musik") {
+            console.log("heyyyy");
+            var statusdiv = document.createElement("div");
+            statusdiv.style.backgroundColor = "#ffc09f";
+            statusdiv.style.position = "absolute";
+            statusdiv.style.top = "61%";
+            statusdiv.style.left = "10%";
+            statusdiv.style.width = "37%";
+            statusdiv.style.height = "17%";
+            statusdiv.style.borderRadius = "10px";
+            statusdiv.style.boxShadow = "5px 5px 5px #b6b6b6";
+            statusdiv.id = "newstatus";
+            document.querySelector("#feedid")?.appendChild(statusdiv);
+            var username = document.createElement("p");
+            username.innerHTML = "@sarah";
+            username.style.textAlign = "center";
+            username.style.position = "relative";
+            username.style.top = "0%";
+            username.style.fontSize = "large";
+            username.id = "username";
+            document.querySelector("#newstatus")?.appendChild(username);
+            var activity = document.createElement("p");
+            activity.innerHTML = statusarray[2] + " " + "auf" + " " + statusarray[1];
+            activity.style.textAlign = "center";
+            activity.style.position = "relative";
+            activity.style.top = "2%";
+            activity.style.fontSize = "medium";
+            document.querySelector("#username")?.appendChild(activity);
         }
     }
     function startChat(_event) {

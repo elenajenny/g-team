@@ -2,7 +2,6 @@ namespace Lightning {
     window.addEventListener("load", handleLoad);
 
     let statusarray: string[] = [];
-
     function handleLoad(_event: Event): void {
     console.log("Anwendung startet");
 
@@ -280,8 +279,8 @@ namespace Lightning {
         statusarray.push(value);
 
         // Zeit Anzeige
-        var today = new Date();
-        var date = today.getHours() + ":" + today.getMinutes() + " " + "Uhr";
+        var today: Date = new Date();
+        var date: string = today.getHours() + ":" + today.getMinutes() + " " + "Uhr";
         console.log(date);
         document.querySelector("#timeid").innerHTML = date;
 
@@ -300,7 +299,7 @@ namespace Lightning {
     }
 
     function postStatus(_event: Event): void {
-        let menu: HTMLElement = <HTMLElement>document.querySelector("#menuid");
+        let feed: HTMLElement = <HTMLElement>document.querySelector("#feedid");
         let status: HTMLElement = <HTMLElement>document.querySelector("#statusid");
     
         if (status.style.display == "block") {
@@ -309,11 +308,42 @@ namespace Lightning {
             status.style.display = "none";
         }
 
-        if (menu.style.display == "none") {
-            menu.style.display = "block";
+        if (feed.style.display == "none") {
+            feed.style.display = "block";
         } else {
-            menu.style.display = "block";
+            feed.style.display = "block";
         }
+        // startFeed(_event);
+
+        if (statusarray[0] == "Musik") {
+            console.log("heyyyy");
+            var statusdiv: HTMLDivElement = document.createElement("div");
+            statusdiv.style.backgroundColor = "#ffc09f"; 
+            statusdiv.style.position = "absolute";   
+            statusdiv.style.top = "61%";   
+            statusdiv.style.left = "10%";
+            statusdiv.style.width = "37%";
+            statusdiv.style.height = "17%";
+            statusdiv.style.borderRadius = "10px";
+            statusdiv.style.boxShadow = "5px 5px 5px #b6b6b6";
+            statusdiv.id = "newstatus";
+            document.querySelector("#feedid")?.appendChild(statusdiv);  
+            var username: HTMLElement = document.createElement("p");
+            username.innerHTML = "@sarah";
+            username.style.textAlign = "center";
+            username.style.position = "relative";
+            username.style.top = "0%";
+            username.style.fontSize = "large";
+            username.id = "username";
+            document.querySelector("#newstatus")?.appendChild(username);   
+            var activity: HTMLElement = document.createElement("p");
+            activity.innerHTML = statusarray[2] + " " + "auf" + " " + statusarray[1];
+            activity.style.textAlign = "center";
+            activity.style.position = "relative";
+            activity.style.top = "2%";
+            activity.style.fontSize = "medium";
+            document.querySelector("#username")?.appendChild(activity);  
+        } 
     }
 
     function startChat(_event: Event): void {
