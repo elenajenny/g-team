@@ -666,6 +666,62 @@ input:checked + .slider:before {
     transform: translate(-50%, -50%);
 }
 
+.status1 {
+    position: absolute;
+    background-color: #ffc09f;
+    top: 20%;
+    left: 10%;
+    width: 37%;
+    height: 17%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+.status2 {
+    position: absolute;
+    background-color: #adf7b6;
+    top: 20%;
+    left: 53%;
+    width: 37%;
+    height: 17%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+.status3 {
+    position: absolute;
+    background-color: #a0ced9;
+    top: 40.5%;
+    left: 10%;
+    width: 37%;
+    height: 17%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+.status4 {
+    position: absolute;
+    background-color: #ffee93;
+    top: 40.5%;
+    left: 53%;
+    width: 37%;
+    height: 17%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+.name {
+    text-align: center;
+    position: relative;
+    top: 0%;
+    font-size: large;
+}
+
+.info {
+    text-align: center;
+    position: relative;
+    top: 2%;
+}
 
 /* Chat */
 
