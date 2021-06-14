@@ -648,6 +648,24 @@ input:checked + .slider:before {
     display: none;
 }
 
+.feedheading {
+    margin: 0;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+.filter {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 
 /* Chat */
 

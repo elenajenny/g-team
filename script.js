@@ -74,7 +74,7 @@ var Lightning;
         profilesettings.addEventListener("click", seeProfile);
         //Feed
         let feedfield = document.querySelector("#feedfieldid");
-        feedfield.addEventListener("click", startProfile);
+        feedfield.addEventListener("click", startFeed);
         // Chat
         let chatfield = document.querySelector("#chatfieldid");
         chatfield.addEventListener("click", startChat);

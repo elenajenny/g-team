@@ -86,7 +86,7 @@ namespace Lightning {
 
     //Feed
     let feedfield: HTMLDivElement = <HTMLDivElement>document.querySelector("#feedfieldid");
-    feedfield.addEventListener("click", startProfile);
+    feedfield.addEventListener("click", startFeed);
 
     // Chat
     let chatfield: HTMLDivElement = <HTMLDivElement>document.querySelector("#chatfieldid");
