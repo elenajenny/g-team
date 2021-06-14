@@ -508,13 +508,13 @@ body {
     text-align: center;
 }
 
-.profiletext {
+.profiletextleft {
     position: relative;
     top: 30%;
     font-size: 17px;
 }
 
-.notificationtext {
+.notificationtextleft {
     position: absolute;
     top: 30%;
     left: 110%;
@@ -545,11 +545,25 @@ body {
 .rightside {
     display: none;
     position: relative;
-    width: 35%;
+    width: 70%;
     height: 100%;
     background-color: #ffc09f;
     border-radius: 10px;
     text-align: center;
+}
+
+.profiletextright {
+    position: relative;
+    top: 30%;
+    left: 70%;
+    font-size: 17px;
+}
+
+.notificationtextright {
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    font-size: 17px;
 }
 
 .pushnotifications {
