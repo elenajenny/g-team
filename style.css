@@ -57,6 +57,10 @@ body {
     font-size: 20px;
 }
 
+/* Login */
+.login {
+    display: none;
+}
 
 /* Hauptmenü */
 

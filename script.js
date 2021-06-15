@@ -42,6 +42,9 @@ var Lightning;
         // Blitz Bild
         let lightning = document.querySelector("#lightningid");
         lightning.addEventListener("click", startApp);
+        // Login
+        let login = document.querySelector("#gettoMenu");
+        login.addEventListener("click", logIn);
         // Navigation
         let menu = document.querySelector("#houseid");
         menu.addEventListener("click", NavigateToMenu);
@@ -78,16 +81,36 @@ var Lightning;
         // Chat
         let chatfield = document.querySelector("#chatfieldid");
         chatfield.addEventListener("click", startChat);
+        // Submit Funktion
+        let sendbutton = document.querySelector("#send");
+        sendbutton.addEventListener("click", submitMessage);
     }
     function startApp(_event) {
         console.log("funktioniert!");
         let start = document.querySelector("#startid");
-        let menu = document.querySelector("#menuid");
+        let login = document.querySelector("#loginid");
         if (start.style.display == "block") {
             start.style.display = "none";
         }
         else {
             start.style.display = "none";
+        }
+        if (login.style.display == "none") {
+            login.style.display = "block";
+        }
+        else {
+            login.style.display = "block";
+        }
+    }
+    function logIn(_event) {
+        console.log("login");
+        let menu = document.querySelector("#menuid");
+        let login = document.querySelector("#loginid");
+        if (login.style.display == "block") {
+            login.style.display = "none";
+        }
+        else {
+            login.style.display = "none";
         }
         if (menu.style.display == "none") {
             menu.style.display = "block";
@@ -331,6 +354,19 @@ var Lightning;
         else {
             chat.style.display = "block";
         }
+    }
+    function submitMessage(_event) {
+        console.log("wird aufgerufen");
+        let message = document.querySelector("#input");
+        let username = document.querySelector("#username");
+        console.log("message:" + message.value);
+        console.log("username:" + username.value);
+        let jsonmessage = "{ Channel: 1, Username: \"" + username.value + "\", Message: \"" + message.value + "\"}";
+        console.log("jsonmessage:" + jsonmessage);
+        const xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "http://localhost:3000/chat", false);
+        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.send(JSON.stringify({ Channel: 1, Username: "Oskar", Message: "hallo" }));
     }
     function startProfile(_event) {
         console.log("profilansicht");

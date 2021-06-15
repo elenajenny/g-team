@@ -47,6 +47,10 @@ namespace Lightning {
     let lightning: HTMLElement = <HTMLElement>document.querySelector("#lightningid");
     lightning.addEventListener("click", startApp);
 
+    // Login
+    let login: HTMLElement = <HTMLElement>document.querySelector("#gettoMenu");
+    login.addEventListener("click", logIn);
+
     // Navigation
     let menu: HTMLElement = <HTMLElement>document.querySelector("#houseid");
     menu.addEventListener("click", NavigateToMenu);
@@ -90,17 +94,41 @@ namespace Lightning {
     // Chat
     let chatfield: HTMLDivElement = <HTMLDivElement>document.querySelector("#chatfieldid");
     chatfield.addEventListener("click", startChat);
+
+    // Submit Funktion
+    let sendbutton: HTMLElement = <HTMLElement>document.querySelector("#send");
+    sendbutton.addEventListener("click", submitMessage);
+
     }
 
     function startApp(_event: Event): void {
         console.log("funktioniert!");
         let start: HTMLElement = <HTMLElement>document.querySelector("#startid");
-        let menu: HTMLElement = <HTMLElement>document.querySelector("#menuid");
+        let login: HTMLElement = <HTMLElement>document.querySelector("#loginid");
+        
 
         if (start.style.display == "block") {
             start.style.display = "none";
         } else {
             start.style.display = "none";
+        }
+
+        if (login.style.display == "none") {
+            login.style.display = "block";
+        } else {
+            login.style.display = "block";
+        }
+    }
+
+    function logIn(_event: Event): void {
+        console.log("login");
+        let menu: HTMLElement = <HTMLElement>document.querySelector("#menuid");
+        let login: HTMLElement = <HTMLElement>document.querySelector("#loginid");
+
+        if (login.style.display == "block") {
+            login.style.display = "none";
+        } else {
+            login.style.display = "none";
         }
 
         if (menu.style.display == "none") {
@@ -363,6 +391,20 @@ namespace Lightning {
         } else {
             chat.style.display = "block";
         }
+    }
+
+    function submitMessage(_event: any): void {
+        console.log("wird aufgerufen");
+        let message: HTMLInputElement = <HTMLInputElement>document.querySelector("#input");
+        let username: HTMLInputElement = <HTMLInputElement>document.querySelector("#username");
+        console.log("message:" + message.value);
+        console.log("username:" + username.value);
+        let jsonmessage: string = "{ Channel: 1, Username: \"" + username.value + "\", Message: \"" + message.value + "\"}";
+        console.log("jsonmessage:" + jsonmessage);
+        const xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "http://localhost:3000/chat", false);
+        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.send(JSON.stringify({ Channel: 1, Username: "Oskar", Message: "hallo"}));
     }
 
     function startProfile(_event: Event): void {
