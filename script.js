@@ -345,7 +345,7 @@ var Lightning;
     function submitMessage(_event) {
         console.log("wird aufgerufen");
         let message = document.querySelector("#input");
-        let username = document.querySelector("#username");
+        let username = document.querySelector("#usernameid");
         console.log("message:" + message.value);
         console.log("username:" + username.value);
         let jsonmessage = "{ Channel: 1, Username: \"" + username.value + "\", Message: \"" + message.value + "\"}";

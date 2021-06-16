@@ -385,7 +385,7 @@ namespace Lightning {
     function submitMessage(_event: any): void {
         console.log("wird aufgerufen");
         let message: HTMLInputElement = <HTMLInputElement>document.querySelector("#input");
-        let username: HTMLInputElement = <HTMLInputElement>document.querySelector("#username");
+        let username: HTMLInputElement = <HTMLInputElement>document.querySelector("#usernameid");
         console.log("message:" + message.value);
         console.log("username:" + username.value);
         let jsonmessage: string = "{ Channel: 1, Username: \"" + username.value + "\", Message: \"" + message.value + "\"}";
