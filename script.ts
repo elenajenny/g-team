@@ -124,17 +124,23 @@ namespace Lightning {
         console.log("login");
         let menu: HTMLElement = <HTMLElement>document.querySelector("#menuid");
         let login: HTMLElement = <HTMLElement>document.querySelector("#loginid");
+        let logininput: HTMLInputElement = <HTMLInputElement>document.querySelector("#usernameid");
 
-        if (login.style.display == "block") {
-            login.style.display = "none";
-        } else {
-            login.style.display = "none";
-        }
-
-        if (menu.style.display == "none") {
-            menu.style.display = "block";
-        } else {
-            menu.style.display = "block";
+        if (logininput.value == "") { 
+            alert ("Ups! Das Feld darf nicht leer bleiben.");
+            login.style.display = "block";
+        } else { 
+            if (login.style.display == "block") {
+                login.style.display = "none";
+            } else {
+                login.style.display = "none";
+            }
+    
+            if (menu.style.display == "none") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "block";
+            }
         }
     }
 
@@ -388,6 +394,7 @@ namespace Lightning {
         let username: HTMLInputElement = <HTMLInputElement>document.querySelector("#usernameid");
         console.log("message:" + message.value);
         console.log("username:" + username.value);
+                
         let jsonmessage: string = "{ Channel: 1, Username: \"" + username.value + "\", Message: \"" + message.value + "\"}";
         console.log("jsonmessage:" + jsonmessage);
 

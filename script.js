@@ -106,17 +106,24 @@ var Lightning;
         console.log("login");
         let menu = document.querySelector("#menuid");
         let login = document.querySelector("#loginid");
-        if (login.style.display == "block") {
-            login.style.display = "none";
+        let logininput = document.querySelector("#usernameid");
+        if (logininput.value == "") {
+            alert("Ups! Das Feld darf nicht leer bleiben.");
+            login.style.display = "block";
         }
         else {
-            login.style.display = "none";
-        }
-        if (menu.style.display == "none") {
-            menu.style.display = "block";
-        }
-        else {
-            menu.style.display = "block";
+            if (login.style.display == "block") {
+                login.style.display = "none";
+            }
+            else {
+                login.style.display = "none";
+            }
+            if (menu.style.display == "none") {
+                menu.style.display = "block";
+            }
+            else {
+                menu.style.display = "block";
+            }
         }
     }
     function NavigateToMenu(_event) {
