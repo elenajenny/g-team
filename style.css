@@ -62,6 +62,51 @@ body {
     display: none;
 }
 
+.loginheading {
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+.loginspan {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.logindescription {
+   text-align: center;
+}
+
+.usernameinput {
+    border: none;
+    padding: 7px 4px 7px 4px;
+    width: 100%;
+    /* flex-grow: 1; */
+    border-radius: 10px;
+    box-shadow: 7px 7px 7px #dbdbdb;
+    margin: 0.25rem;
+}
+
+.loginButton {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 15%;
+    background: rgb(163, 163, 163);
+    border: none;
+    padding: 7px 4px 7px 4px;
+    margin: 0.25rem;
+    border-radius: 10px;
+    box-shadow: 7px 7px 7px #dbdbdb;;
+    outline: none;
+    color: white;
+}
+
 /* Hauptmenü */
 
 .menu {
@@ -86,7 +131,7 @@ body {
     width: 120px;
     height: 70px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .feedfield {
@@ -97,7 +142,7 @@ body {
     width: 120px;
     height: 70px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .profilefield {
@@ -108,7 +153,7 @@ body {
     width: 120px;
     height: 70px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .chatfield {
@@ -119,7 +164,7 @@ body {
     width: 120px;
     height: 70px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .textmenu {
@@ -160,7 +205,7 @@ body {
     width: 320px;
     height: 100px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .film {
@@ -171,7 +216,7 @@ body {
     width: 320px;
     height: 100px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .sport {
@@ -182,7 +227,7 @@ body {
     width: 320px;
     height: 100px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .fitness {
@@ -193,7 +238,7 @@ body {
     width: 320px;
     height: 100px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .category {
@@ -228,7 +273,7 @@ body {
     width: 320px;
     height: 85px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .deezer {
@@ -239,7 +284,7 @@ body {
     width: 320px;
     height: 85px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .applemusic {
@@ -250,7 +295,7 @@ body {
     width: 320px;
     height: 85px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .tidal {
@@ -261,7 +306,7 @@ body {
     width: 320px;
     height: 85px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .amazonmusic {
@@ -272,7 +317,7 @@ body {
     width: 320px;
     height: 85px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .category {
@@ -307,7 +352,7 @@ body {
     width: 320px;
     height: 85px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .rnb {
@@ -318,7 +363,7 @@ body {
     width: 320px;
     height: 85px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .klassik {
@@ -329,7 +374,7 @@ body {
     width: 320px;
     height: 85px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .soul {
@@ -340,7 +385,7 @@ body {
     width: 320px;
     height: 85px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;
 }
 
 .hiphop {
@@ -351,7 +396,7 @@ body {
     width: 320px;
     height: 85px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .category {
@@ -410,7 +455,7 @@ body {
     width: 90%;
     height: 85px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .head {
@@ -469,7 +514,7 @@ body {
     width: 90%;
     height: 45px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
     text-align: center;
 }
 
@@ -482,7 +527,7 @@ body {
     height: 25px;
     border-radius: 10px;
     border-color: #eaeaea;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
     text-align: center;
     font-size: 15px;
 }
@@ -490,6 +535,20 @@ body {
 /* Profilansicht */
 .profile {
     display: none;
+}
+
+.chatname {
+    position: relative;
+    top: 3%;
+    left: 30%;
+}
+
+.picturespan {
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    width: 20px;
+    height: 20px;
 }
 
 .overview {
@@ -678,7 +737,7 @@ input:checked + .slider:before {
     width: 37%;
     height: 17%;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .status2 {
@@ -689,7 +748,7 @@ input:checked + .slider:before {
     width: 37%;
     height: 17%;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;
 }
 
 .status3 {
@@ -700,7 +759,7 @@ input:checked + .slider:before {
     width: 37%;
     height: 17%;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .status4 {
@@ -711,7 +770,7 @@ input:checked + .slider:before {
     width: 37%;
     height: 17%;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #b6b6b6;
+    box-shadow: 7px 7px 7px #dbdbdb;;
 }
 
 .name {
@@ -727,45 +786,92 @@ input:checked + .slider:before {
     top: 2%;
 }
 
+.statusclass {
+    background-color: #ffc09f;
+    position: absolute;
+    top: 61%;
+    left: 10%;
+    width: 37%;
+    height: 17%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+.usernameclass {
+    text-align: center;
+    position: relative;
+    top: 0%;
+    font-size: large;
+}
+
+.activityclass {
+    text-align: center;
+    position: relative;
+    top: 2%;
+    font-size: medium;
+}
+
 /* Chat */
 
 .chat {
     display: none;
+    
 }
 
-.chatname {
-    position: relative;
-    left: 25%;
-    top: 5%;
-    font-size: 20px;
-}
-
-.picturespan {
+.chatheading {
+    margin: 0;
     position: absolute;
-    top: 5%;
+    top: 7%;
     left: 50%;
-    font-size: 60px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 25px;
 }
 
-.profilepicture {
-    width: 100px;
-    height: 75px;
+.messagefield {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+}
+
+.inputmessage {
+    border: none;
+    padding: 7px 4px 7px 4px;
+    width: 70%;
+    flex-grow: 1;
     border-radius: 10px;
+    margin: 0.25rem;
 }
-#form {
-    background: rgba(0, 0, 0, 0.15);
-    padding: 0.25rem;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 350px;
-    display: flex;
-    height: 3rem;
-    box-sizing: border-box;
-    backdrop-filter: blur(10px);
+
+.inputmessage:focus {
+    outline: none;
 }
-#input {
+
+.sendbutton {
+    background: rgb(163, 163, 163);
+    border: none;
+    padding: 7px 4px 7px 4px;
+    margin: 0.25rem;
+    border-radius: 10px;
+    box-shadow: 7px 7px 7px #dbdbdb;;
+    outline: none;
+    color: white;
+}
+
+.messagediv {
+    background-color: #ffffff;
+    position: relative;
+    height: 25%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 7px 7px 7px #dbdbdb;;
+    padding: 7px 4px 7px 4px;
+}
+
+.messagediv:nth-child(odd){
+    background: #efefef;
+}
+/* #input {
     border: none;
     padding: 0 1rem;
     flex-grow: 1;
@@ -796,4 +902,4 @@ input:checked + .slider:before {
 #messages > li:nth-child(odd){
     background: #efefef;
 }
-}
+} */

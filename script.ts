@@ -344,32 +344,21 @@ namespace Lightning {
         // startFeed(_event);
 
         if (statusarray[0] == "Musik") {
-            console.log("heyyyy");
             var statusdiv: HTMLDivElement = document.createElement("div");
-            statusdiv.style.backgroundColor = "#ffc09f"; 
-            statusdiv.style.position = "absolute";   
-            statusdiv.style.top = "61%";   
-            statusdiv.style.left = "10%";
-            statusdiv.style.width = "37%";
-            statusdiv.style.height = "17%";
-            statusdiv.style.borderRadius = "10px";
-            statusdiv.style.boxShadow = "5px 5px 5px #b6b6b6";
+            statusdiv.className += "statusclass";
             statusdiv.id = "newstatus";
-            document.querySelector("#feedid")?.appendChild(statusdiv);  
+            document.querySelector("#feedid")?.appendChild(statusdiv); 
+             
             var username: HTMLElement = document.createElement("p");
-            username.innerHTML = "@sarah";
-            username.style.textAlign = "center";
-            username.style.position = "relative";
-            username.style.top = "0%";
-            username.style.fontSize = "large";
+            username.className += "usernameclass";
             username.id = "username";
-            document.querySelector("#newstatus")?.appendChild(username);   
+            username.innerHTML = "@sarah";
+            document.querySelector("#newstatus")?.appendChild(username);
+              
             var activity: HTMLElement = document.createElement("p");
+            console.log("array:" + statusarray[2] + "+" + statusarray[1]);
             activity.innerHTML = statusarray[2] + " " + "auf" + " " + statusarray[1];
-            activity.style.textAlign = "center";
-            activity.style.position = "relative";
-            activity.style.top = "2%";
-            activity.style.fontSize = "medium";
+            activity.className += "activityclass";
             document.querySelector("#username")?.appendChild(activity);  
         } 
     }
@@ -401,10 +390,17 @@ namespace Lightning {
         console.log("username:" + username.value);
         let jsonmessage: string = "{ Channel: 1, Username: \"" + username.value + "\", Message: \"" + message.value + "\"}";
         console.log("jsonmessage:" + jsonmessage);
-        const xhttp = new XMLHttpRequest();
-        xhttp.open("POST", "http://localhost:3000/chat", false);
-        xhttp.setRequestHeader("Content-type", "application/json");
-        xhttp.send(JSON.stringify({ Channel: 1, Username: "Oskar", Message: "hallo"}));
+
+        
+        var messagediv: HTMLDivElement = document.createElement("div");
+        messagediv.className += "messagediv";
+        messagediv.innerHTML = message.value;
+        document.querySelector("#chatid")?.appendChild(messagediv);   
+
+        // const xhttp = new XMLHttpRequest();
+        // xhttp.open("POST", "http://localhost:3000/chat", false);
+        // xhttp.setRequestHeader("Content-type", "application/json");
+        // xhttp.send(JSON.stringify(jsonmessage));
     }
 
     function startProfile(_event: Event): void {

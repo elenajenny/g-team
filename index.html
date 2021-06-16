@@ -14,8 +14,8 @@
 
     <!-- Startseite -->
     <div id="startid" class="start">
-        <!-- <img src="Blitz.svg" id="lightningid" class="lightning"> -->
-        <button id="lightningid" class="lightning">Blitz</button>
+        <img src="Blitz.svg" id="lightningid" class="lightning">
+        <!-- <button id="lightningid" class="lightning">Blitz</button> -->
         <br>
         <p class="startheading"><b>Lightning.</b></p>
         <p class="startslogan">Share the small moments.</p>
@@ -23,8 +23,11 @@
 
     <!-- Login -->
     <div id="loginid" class="login">
-        <p>Username:</p><input id="username">
-        <button id="gettoMenu">weiter</button>
+        <h3 class="loginheading">Log In</h3>
+        <span class="loginspan">
+            <p class="logindescription">Bitte gebe deinen Benutzernamen an</p><input id="username" class="usernameinput">
+        </span>
+        <button id="gettoMenu" class="loginButton">weiter</button>
     </div>
 
     <!-- Dashboard -->
@@ -168,21 +171,12 @@
             <span class="house" id="getbackid">
                 <i class="fas fa-home"></i>
             </span>
-            <!-- <span class="arrow" id="arrowid">
-               <i class="fas fa-chevron-left"></i>
-            </span> -->
-            <span class="chatname">
-                <p><b>Oskar</b></p>
-            </span>
-            <span class="picturespan">
-                <img src="Oskar.jpg" class="profilepicture">
-                <!-- <i class="fas fa-user"></i> -->
+            <span class="chatheading">
+                <p><b>Chat</b></p>
             </span>
         </div>
-            <ul id="messages"></ul>
-            <!-- <form id="form" action=""> -->
-            <input id="input" autocomplete="off"><button id="send">Send</button>
-            <!-- </form> -->
+        <div class="messagefield">
+            <input id="input" class="inputmessage" autocomplete="off"><button id="send" class="sendbutton" type="submit">Senden</button>
         </div>
     </div>
 
