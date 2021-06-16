@@ -404,10 +404,13 @@ namespace Lightning {
         messagediv.innerHTML = message.value;
         document.querySelector("#chatid")?.appendChild(messagediv);   
 
-        // const xhttp = new XMLHttpRequest();
+        const xhttp = new XMLHttpRequest();
         // xhttp.open("POST", "http://localhost:3000/chat", false);
-        // xhttp.setRequestHeader("Content-type", "application/json");
-        // xhttp.send(JSON.stringify(jsonmessage));
+        xhttp.open("POST", "https://lightning21.herokuapp.com/", false);
+        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.send(JSON.stringify(jsonmessage));
+        
+       
     }
 
     function startProfile(_event: Event): void {
