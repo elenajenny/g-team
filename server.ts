@@ -3,8 +3,6 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const fs = require("fs");
 
-
-
 const app = express();
 const port = 3000;
 
@@ -17,8 +15,6 @@ app.use(cors());
 // Configuring body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-
 
 app.post("/chat", (req: any, res: any) => {
     const chat = req.body;
