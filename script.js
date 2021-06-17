@@ -369,10 +369,12 @@ var Lightning;
         };
         console.log("send");
         console.log("Json:" + JSON.stringify(actChat));
+        // header("Access-Control-Allow-Origin: *");
         const xhttp = new XMLHttpRequest();
         xhttp.open("POST", "https://lightning21.herokuapp.com/");
         // xhttp.open("POST", "http://localhost:3000/chat");
         xhttp.setRequestHeader("Content-Type", "application/json");
+        xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
         xhttp.send(JSON.stringify(actChat));
     }
     function startProfile(_event) {

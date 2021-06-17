@@ -1,4 +1,4 @@
-const express = require("express")
+const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const fs = require("fs");
@@ -9,7 +9,7 @@ const port = 3000;
 
 // Chats Array
 let chats: any = [];
-let filteredchats: any = [];
+let filteredchats = [];
 
 app.use(cors());
 
@@ -19,8 +19,8 @@ app.use(bodyParser.json());
 
 
 
-app.post("/chat", (req, res) => {
-    const chat: any = req.body;
+app.post("/chat", (req: any, res: any) => {
+    const chat = req.body;
 
     
     console.log(chat);
@@ -29,7 +29,7 @@ app.post("/chat", (req, res) => {
     chats.push(chat);
 
     // Chat zur Datei hinzufügen
-    fs.writeFile ("chats.json", JSON.stringify(chats), function(err) {
+    fs.writeFile ("chats.json", JSON.stringify(chats), function (err: any) {
         if (err) throw err;
         console.log("complete");
         }
@@ -38,16 +38,13 @@ app.post("/chat", (req, res) => {
 });
 
 // Lesen aller chats
-app.get("/chats", (req, res) => {
+app.get("/chats", (req: any, res: any) => {
     res.json(chats);
-
-
-
 });
 
 // Einlesen der gespeicherten Chats
-app.get("/load", (req, res) => {
-    fs.readFile("chats.json", (err, data) => {
+app.get("/load", (req: any, res: any) => {
+    fs.readFile("chats.json", (err: any, data: any) => {
         if (err) throw err;
         chats = JSON.parse(data);
         console.log("Chats alle gelesen");
@@ -57,9 +54,9 @@ app.get("/load", (req, res) => {
 });
 
 // Lesen aller Chats mit Filter "Channel"
-app.get("/filter", (request, response) => {
+app.get("/filter", (request: any, response: any) => {
     
-    let channel: any = request.query.channel;
+    let channel = request.query.channel;
     console.log("channel: " + channel);
     if (chats.filter(chat => chat.channel == channel).length !== 0){
         filteredchats = chats.filter(chat => chat.channel == channel);
