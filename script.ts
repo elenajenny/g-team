@@ -426,9 +426,8 @@ namespace Lightning {
      
         xhttp.open("POST", "https://lightning21.herokuapp.com/");
         // xhttp.open("POST", "http://localhost:3000/chat");
-        // xhttp.setRequestHeader("Content-Type", "application/json");
-        xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
-        xhttp.setRequestHeader("Content-Type", "text/html; charset-utf-8");
+        xhttp.setRequestHeader("Content-Type", "application/json");
+        // xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
         xhttp.send(JSON.stringify(actChat));
     }
 
