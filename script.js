@@ -351,20 +351,29 @@ var Lightning;
     }
     function submitMessage(_event) {
         console.log("wird aufgerufen");
+        // let chat: HTMLElement = <HTMLElement>document.querySelector("#chatid");
+        // let start: HTMLElement = <HTMLElement>document.querySelector("#startid");
         let message = document.querySelector("#input");
         let username = document.querySelector("#usernameid");
         console.log("message:" + message.value);
         console.log("username:" + username.value);
-        let jsonmessage = "{ Channel: 1, Username: \"" + username.value + "\", Message: \"" + message.value + "\"}";
-        console.log("jsonmessage:" + jsonmessage);
+        // neue Nachricht anhängen
         var messagediv = document.createElement("div");
         messagediv.className += "messagediv";
         messagediv.innerHTML = message.value;
         document.querySelector("#chatid")?.appendChild(messagediv);
-        // const xhttp = new XMLHttpRequest();
-        // xhttp.open("POST", "http://localhost:3000/chat", false);
-        // xhttp.setRequestHeader("Content-type", "application/json");
-        // xhttp.send(JSON.stringify(jsonmessage));
+        let actChat = {
+            Channel: "1",
+            User: username.value,
+            Message: message.value
+        };
+        console.log("send");
+        console.log("Json:" + JSON.stringify(actChat));
+        const xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "https://lightning21.herokuapp.com/");
+        // xhttp.open("POST", "http://localhost:3000/chat");
+        xhttp.setRequestHeader("Content-Type", "application/json");
+        xhttp.send(JSON.stringify(actChat));
     }
     function startProfile(_event) {
         console.log("profilansicht");

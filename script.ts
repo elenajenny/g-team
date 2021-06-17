@@ -2,6 +2,14 @@ namespace Lightning {
     window.addEventListener("load", handleLoad);
 
     let statusarray: string[] = [];
+
+    interface Chat {
+        Channel: string;
+        User: string;
+        Message: string;
+    }
+
+
     function handleLoad(_event: Event): void {
     console.log("Anwendung startet");
 
@@ -96,7 +104,7 @@ namespace Lightning {
     chatfield.addEventListener("click", startChat);
 
     // Submit Funktion
-    let sendbutton: HTMLElement = <HTMLElement>document.querySelector("#send");
+    let sendbutton: HTMLButtonElement = <HTMLButtonElement>document.querySelector("#send");
     sendbutton.addEventListener("click", submitMessage);
 
     }
@@ -388,29 +396,36 @@ namespace Lightning {
         }
     }
 
-    function submitMessage(_event: any): void {
+    function submitMessage(_event: Event): void {
         console.log("wird aufgerufen");
+        // let chat: HTMLElement = <HTMLElement>document.querySelector("#chatid");
+        // let start: HTMLElement = <HTMLElement>document.querySelector("#startid");
+
         let message: HTMLInputElement = <HTMLInputElement>document.querySelector("#input");
         let username: HTMLInputElement = <HTMLInputElement>document.querySelector("#usernameid");
         console.log("message:" + message.value);
         console.log("username:" + username.value);
-                
-        let jsonmessage: string = "{ Channel: 1, Username: \"" + username.value + "\", Message: \"" + message.value + "\"}";
-        console.log("jsonmessage:" + jsonmessage);
-
         
+        // neue Nachricht anhängen
         var messagediv: HTMLDivElement = document.createElement("div");
         messagediv.className += "messagediv";
         messagediv.innerHTML = message.value;
         document.querySelector("#chatid")?.appendChild(messagediv);   
 
+        let actChat: Chat = {
+            Channel: "1",
+            User: username.value,
+            Message: message.value
+        };
+        console.log("send");
+        console.log("Json:" + JSON.stringify(actChat));
+    
         const xhttp = new XMLHttpRequest();
-        // xhttp.open("POST", "http://localhost:3000/chat", false);
-        xhttp.open("POST", "https://lightning21.herokuapp.com/", false);
-        xhttp.setRequestHeader("Content-type", "application/json");
-        xhttp.send(JSON.stringify(jsonmessage));
-        
-       
+     
+        xhttp.open("POST", "https://lightning21.herokuapp.com/");
+        // xhttp.open("POST", "http://localhost:3000/chat");
+        xhttp.setRequestHeader("Content-Type", "application/json");
+        xhttp.send(JSON.stringify(actChat));
     }
 
     function startProfile(_event: Event): void {

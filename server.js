@@ -26,21 +26,21 @@ app.post("/chat", (req, res) => {
     res.send("Chat is added to the server");
 });
 // Lesen aller chats
-app.get('/chats', (req, res) => {
+app.get("/chats", (req, res) => {
     res.json(chats);
 });
 // Einlesen der gespeicherten Chats
-app.get('/load', (req, res) => {
-    fs.readFile('chats.json', (err, data) => {
+app.get("/load", (req, res) => {
+    fs.readFile("chats.json", (err, data) => {
         if (err)
             throw err;
         chats = JSON.parse(data);
-        console.log('Chats alle gelesen');
+        console.log("Chats alle gelesen");
         //console.log(chats);
     });
 });
 // Lesen aller Chats mit Filter "Channel"
-app.get('/filter', (request, response) => {
+app.get("/filter", (request, response) => {
     let channel = request.query.channel;
     console.log("channel: " + channel);
     if (chats.filter(chat => chat.channel == channel).length !== 0) {
