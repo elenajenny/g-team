@@ -401,7 +401,8 @@ namespace Lightning {
         loadChats();
     }
 
-    function submitMessage(_event: Event): boolean {
+    function submitMessage(_event: Event): void {
+        _event.preventDefault();
         console.log("wird aufgerufen");
 
         let message: HTMLInputElement = <HTMLInputElement>document.querySelector("#input");
@@ -420,13 +421,11 @@ namespace Lightning {
         
         const xhttp = new XMLHttpRequest();
      
-        // xhttp.open("POST", "https://lightning21.herokuapp.com/");
-        xhttp.open("POST", "http://localhost:3000/chat");
+        xhttp.open("POST", "https://lightning21.herokuapp.com/");
+        // xhttp.open("POST", "http://localhost:3000/chat");
         xhttp.setRequestHeader("Content-Type", "application/json");
-        // xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
         xhttp.send(JSON.stringify(actChat));
         loadChats();
-        // return false;
     }
 
     function loadChats(): void {
@@ -443,13 +442,14 @@ namespace Lightning {
         xhttp.send();
       
         const chats = JSON.parse(xhttp.responseText);
+
     
         console.log("Hier in loadChats");
         
         // alle Nachrichten in den Nachrichten Bereich schreiben
         for (let chat of chats) {
             const x = `
-            <div>${chat.User}: ${chat.Message}</div>
+            <div class="messagediv">${chat.User}: ${chat.Message}</div>
             `;
             document.getElementById("chatmessagesid").innerHTML = document.getElementById("chatmessagesid").innerHTML + x;
         }

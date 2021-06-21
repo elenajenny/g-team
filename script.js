@@ -354,6 +354,7 @@ var Lightning;
         loadChats();
     }
     function submitMessage(_event) {
+        _event.preventDefault();
         console.log("wird aufgerufen");
         let message = document.querySelector("#input");
         let username = document.querySelector("#usernameid");
@@ -367,13 +368,11 @@ var Lightning;
         console.log("send");
         console.log("Json:" + JSON.stringify(actChat));
         const xhttp = new XMLHttpRequest();
-        // xhttp.open("POST", "https://lightning21.herokuapp.com/");
-        xhttp.open("POST", "http://localhost:3000/chat");
+        xhttp.open("POST", "https://lightning21.herokuapp.com/");
+        // xhttp.open("POST", "http://localhost:3000/chat");
         xhttp.setRequestHeader("Content-Type", "application/json");
-        // xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
         xhttp.send(JSON.stringify(actChat));
         loadChats();
-        // return false;
     }
     function loadChats() {
         // Nachricht anhängen
@@ -388,7 +387,7 @@ var Lightning;
         // alle Nachrichten in den Nachrichten Bereich schreiben
         for (let chat of chats) {
             const x = `
-            <div>${chat.User}: ${chat.Message}</div>
+            <div class="messagediv">${chat.User}: ${chat.Message}</div>
             `;
             document.getElementById("chatmessagesid").innerHTML = document.getElementById("chatmessagesid").innerHTML + x;
         }

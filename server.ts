@@ -41,6 +41,7 @@ app.get("/chats", (req: any, res: any) => {
 
 // Einlesen der gespeicherten Chats
 app.get("/load", (req: any, res: any) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
     fs.readFile("chats.json", (err: any, data: any) => {
         if (err) throw err;
         chats = JSON.parse(data);
@@ -55,7 +56,7 @@ app.get("/filter", (request: any, response: any) => {
     
     let channel = request.query.channel;
     console.log("channel: " + channel);
-    if (chats.filter(chat => chat.channel == channel).length !== 0){
+    if (chats.filter(chat => chat.channel == channel).length !== 0) {
         filteredchats = chats.filter(chat => chat.channel == channel);
         response.json(filteredchats);
     } else {

@@ -31,6 +31,7 @@ app.get("/chats", (req, res) => {
 });
 // Einlesen der gespeicherten Chats
 app.get("/load", (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
     fs.readFile("chats.json", (err, data) => {
         if (err)
             throw err;

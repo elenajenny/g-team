@@ -875,7 +875,7 @@ input:checked + .slider:before {
     background-color: #ffffff;
     position: relative;
     height: 25%;
-    text-align: center;
+    text-align: left;
     border-radius: 10px;
     box-shadow: 7px 7px 7px #dbdbdb;;
     padding: 7px 4px 7px 4px;
