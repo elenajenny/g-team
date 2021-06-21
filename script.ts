@@ -449,7 +449,7 @@ namespace Lightning {
         // alle Nachrichten in den Nachrichten Bereich schreiben
         for (let chat of chats) {
             const x = `
-            <div>Chat: ${chat.Message}</div>
+            <div>${chat.User}: ${chat.Message}</div>
             `;
             document.getElementById("chatmessagesid").innerHTML = document.getElementById("chatmessagesid").innerHTML + x;
         }
