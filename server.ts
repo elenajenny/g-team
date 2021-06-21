@@ -18,7 +18,6 @@ app.use(bodyParser.json());
 
 app.post("/chat", (req: any, res: any) => {
     const chat = req.body;
-
     
     console.log(chat);
 
@@ -41,7 +40,6 @@ app.get("/chats", (req: any, res: any) => {
 
 // Einlesen der gespeicherten Chats
 app.get("/load", (req: any, res: any) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
     fs.readFile("chats.json", (err: any, data: any) => {
         if (err) throw err;
         chats = JSON.parse(data);

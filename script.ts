@@ -421,8 +421,8 @@ namespace Lightning {
         
         const xhttp = new XMLHttpRequest();
      
-        xhttp.open("POST", "https://lightning21.herokuapp.com/");
-        // xhttp.open("POST", "http://localhost:3000/chat");
+        // xhttp.open("POST", "https://lightning21.herokuapp.com/");
+        xhttp.open("POST", "http://localhost:3000/chat");
         xhttp.setRequestHeader("Content-Type", "application/json");
         xhttp.send(JSON.stringify(actChat));
         loadChats();
