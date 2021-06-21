@@ -1,0 +1,24 @@
+{
+  "name": "g-team",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js remote"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elenajenny/g-team.git"
+  },
+  "author": "celine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elenajenny/g-team/issues"
+  },
+  "homepage": "https://github.com/elenajenny/g-team#readme"
+}
