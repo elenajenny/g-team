@@ -107,6 +107,10 @@ namespace Lightning {
     let sendbutton: HTMLButtonElement = <HTMLButtonElement>document.querySelector("#send");
     sendbutton.addEventListener("click", submitMessage);
 
+    // Refresh Funktion
+    let refreshbutton: HTMLButtonElement = <HTMLButtonElement>document.querySelector("#refreshid");
+    refreshbutton.addEventListener("click", loadChats);
+
     }
 
     function startApp(_event: Event): void {
@@ -394,25 +398,17 @@ namespace Lightning {
         } else {
             chat.style.display = "block";
         }
+        loadChats();
     }
 
-    function submitMessage(_event: Event): void {
+    function submitMessage(_event: Event): boolean {
         console.log("wird aufgerufen");
-        // let chat: HTMLElement = <HTMLElement>document.querySelector("#chatid");
-        // let start: HTMLElement = <HTMLElement>document.querySelector("#startid");
 
         let message: HTMLInputElement = <HTMLInputElement>document.querySelector("#input");
         let username: HTMLInputElement = <HTMLInputElement>document.querySelector("#usernameid");
         console.log("message:" + message.value);
         console.log("username:" + username.value);
-        
-        // neue Nachricht anhängen
-        var messagediv: HTMLDivElement = document.createElement("div");
-        messagediv.className += "messagediv";
-        messagediv.innerHTML = message.value;
-        document.querySelector("#chatid")?.appendChild(messagediv);  
-
-
+          
         let actChat: Chat = {
             Channel: "1",
             User: username.value,
@@ -424,12 +420,40 @@ namespace Lightning {
         
         const xhttp = new XMLHttpRequest();
      
-        xhttp.open("POST", "https://lightning21.herokuapp.com/");
-        // xhttp.open("POST", "http://localhost:3000/chat");
+        // xhttp.open("POST", "https://lightning21.herokuapp.com/");
+        xhttp.open("POST", "http://localhost:3000/chat");
         xhttp.setRequestHeader("Content-Type", "application/json");
-        
         // xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
         xhttp.send(JSON.stringify(actChat));
+        loadChats();
+        // return false;
+    }
+
+    function loadChats(): void {
+
+        // Nachricht anhängen
+        var messagediv: HTMLDivElement = document.createElement("div");
+
+        const xhttp = new XMLHttpRequest();
+
+        // Nachrichten initialisieren
+        document.getElementById("chatmessagesid").innerHTML = "";
+      
+        xhttp.open("GET", "http://localhost:3000/chats", false);
+        xhttp.send();
+      
+        const chats = JSON.parse(xhttp.responseText);
+    
+        console.log("Hier in loadChats");
+        
+        // alle Nachrichten in den Nachrichten Bereich schreiben
+        for (let chat of chats) {
+            const x = `
+            <div>Chat: ${chat.Message}</div>
+            `;
+            document.getElementById("chatmessagesid").innerHTML = document.getElementById("chatmessagesid").innerHTML + x;
+        }
+        
     }
 
     function startProfile(_event: Event): void {

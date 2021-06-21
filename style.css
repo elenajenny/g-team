@@ -828,6 +828,19 @@ input:checked + .slider:before {
     font-size: 25px;
 }
 
+.refresh {
+    position: absolute;
+    top: 4%;
+    background: rgb(163, 163, 163);
+    border: none;
+    padding: 7px 4px 7px 4px;
+    margin: 0.25rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #dbdbdb;;
+    outline: none;
+    color: white;
+}
+
 .messagefield {
     position: absolute;
     bottom: 0%;
