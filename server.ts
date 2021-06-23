@@ -3,8 +3,9 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const fs = require("fs");
 
+//änderung
 const app = express();
-const port = process.env.Port || 3000;
+const port = process.env.PORT || 3000;
 
 // Chats Array
 let chats: any = [];
