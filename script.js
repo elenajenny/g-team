@@ -368,8 +368,7 @@ var Lightning;
         console.log("send");
         console.log("Json:" + JSON.stringify(actChat));
         const xhttp = new XMLHttpRequest();
-        xhttp.open("POST", "https://lightning21.herokuapp.com/");
-        // xhttp.open("POST", "http://localhost:3000/chat");
+        xhttp.open("POST", "https://lightning21.herokuapp.com/chat");
         xhttp.setRequestHeader("Content-Type", "application/json");
         xhttp.send(JSON.stringify(actChat));
         loadChats();
@@ -380,7 +379,7 @@ var Lightning;
         const xhttp = new XMLHttpRequest();
         // Nachrichten initialisieren
         document.getElementById("chatmessagesid").innerHTML = "";
-        xhttp.open("GET", "http://localhost:3000/chats", false);
+        xhttp.open("GET", "https://lightning21.herokuapp.com/chats", false);
         xhttp.send();
         const chats = JSON.parse(xhttp.responseText);
         console.log("Hier in loadChats");
